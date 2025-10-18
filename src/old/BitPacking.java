@@ -1,3 +1,4 @@
+package old;
 
 /*
  * Classe qui gère la décompression / compression (sans chevauchement)
