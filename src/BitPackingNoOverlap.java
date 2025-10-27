@@ -45,6 +45,11 @@ public class BitPackingNoOverlap implements ICompressor {
     @Override
     public int[] decompress() {
         int[] result = new int[originalLength];
+        return decompress(result);
+    }
+
+    @Override
+    public int[] decompress(int[] output) {
         int slotsPerInt = 32 / bitWidth;
 
         for (int i = 0; i < originalLength; i++) {
@@ -52,10 +57,10 @@ public class BitPackingNoOverlap implements ICompressor {
             int offset = (i % slotsPerInt) * bitWidth;
 
             int mask = (1 << bitWidth) - 1;
-            result[i] = (compressedData[blockIndex] >> offset) & mask;
+            output[i] = (compressedData[blockIndex] >> offset) & mask;
         }
 
-        return result;
+        return output;
     }
 
     /**

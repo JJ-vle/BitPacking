@@ -47,7 +47,12 @@ public class BitPackingOverlap implements ICompressor {
 
     @Override
     public int[] decompress() {
-        int[] result = new int[originalLength];
+        int[] result = new int[originalLength]; // ou originalLength selon ta classe
+        return decompress(result);
+    }
+
+    @Override
+    public int[] decompress(int[] output) {
         long bitPos = 0; // position courante dans flux de bits global
 
         for (int i = 0; i < originalLength; i++) {
@@ -67,11 +72,11 @@ public class BitPackingOverlap implements ICompressor {
                 value = (highPart << spaceLeft) | lowPart;
             }
 
-            result[i] = value;
+            output[i] = value;
             bitPos += bitWidth; // avancer de bitWidth bits dans le flux
         }
 
-        return result;
+        return output;
     }
 
     @Override

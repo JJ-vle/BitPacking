@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         int[] data = {1, 2, 3, 10, 15, 7, 8, 31};
 
-        ICompressor compressor = BitPackingFactory.create("nooverlap");
+        ICompressor compressor = BitPackingFactory.create("overflow");
 
         int[] compressed = compressor.compress(data);
         int[] decompressed = compressor.decompress();
