@@ -92,7 +92,7 @@ public class BitPackingOverflow implements ICompressor {
         }
         return output;
     }
-
+/* 
     @Override
     public int get(int i) {
         long bitPos = (long) i * totalBitsPerEntry;
@@ -105,7 +105,35 @@ public class BitPackingOverflow implements ICompressor {
             return overflowData[overflowIndex];
         }
     }
-    
+*/
+
+    @Override
+    public int get(int i) {
+        long bitPos = 0;
+        for (int k = 0; k < i; k++) {
+            int flag = (int) unpackBits(bitPos, 1);
+            bitPos += 1;
+            bitPos += (flag == 0 ? baseBits : overflowBits);
+        }
+
+        int flag = (int) unpackBits(bitPos, 1);
+        bitPos += 1;
+
+        if (flag == 0) {
+            return (int) unpackBits(bitPos, baseBits);
+        } else {
+            int overflowIndex = (int) unpackBits(bitPos, overflowBits);
+            if (overflowIndex < 0 || overflowIndex >= overflowData.length) {
+                throw new IllegalStateException(String.format(
+                    "Invalid overflow index %d (max %d) at i=%d", 
+                    overflowIndex, overflowData.length - 1, i
+                ));
+            }
+            return overflowData[overflowIndex];
+        }
+    }
+
+
     /** Packs 'value' into compressedData at bit position bitPos using bitCount bits */
     private void packBits(int value, int bitCount, long bitPos) {
         int index = (int) (bitPos / 32);
