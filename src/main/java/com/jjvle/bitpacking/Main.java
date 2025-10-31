@@ -1,3 +1,5 @@
+package com.jjvle.bitpacking;
+
 import java.util.Arrays;
 
 public class Main {

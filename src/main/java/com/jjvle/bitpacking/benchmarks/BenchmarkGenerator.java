@@ -1,3 +1,5 @@
+package com.jjvle.bitpacking.benchmarks;
+
 import java.io.*;
 import java.util.*;
 

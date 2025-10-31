@@ -1,3 +1,5 @@
+package com.jjvle.bitpacking;
+
 public class BitPackingNoOverlap implements ICompressor {
     private int[] compressedData;
     private int bitWidth;

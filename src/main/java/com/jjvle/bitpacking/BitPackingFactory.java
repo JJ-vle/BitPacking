@@ -1,3 +1,5 @@
+package com.jjvle.bitpacking;
+
 public class BitPackingFactory {
     public static ICompressor create(String type) {
         return switch (type.toLowerCase()) {

@@ -1,6 +1,11 @@
+package com.jjvle.bitpacking.benchmarks;
+
 import java.util.*;
 import java.io.*;
 import java.util.function.Supplier;
+
+import com.jjvle.bitpacking.BitPackingFactory;
+import com.jjvle.bitpacking.ICompressor;
 
 public class Benchmark {
 
@@ -41,7 +46,7 @@ public class Benchmark {
 
                         // get(i)
                         Random rand = new Random(42);
-                        int[] randomIdx = rand.ints(1000, 0, n).toArray();
+                        int[] randomIdx = rand.ints(1000, 0, n).toArray(); 
                         double avgGet = measureTimeNs(() -> {
                             for (int idx : randomIdx) compressor.get(idx);
                         });
