@@ -1,0 +1,16 @@
+type,size,avgCompress(ms),avgDecompress(ms),avgGet(ns),ratio,tCrit(µs)
+boltzmann,nooverlap,1000,0.003,0.003,36.8,1.000000,Infinity
+boltzmann,nooverlap,10000,0.014,0.013,17.0,1.000000,Infinity
+boltzmann,nooverlap,100000,0.144,0.134,16.5,1.000000,Infinity
+boltzmann,nooverlap,1000000,1.412,1.382,17.7,1.000000,Infinity
+boltzmann,nooverlap,10000000,14.998,15.714,57.2,1.000000,Infinity
+boltzmann,overlap,1000,0.001,0.001,57.7,0.532000,0.000
+boltzmann,overlap,10000,0.011,0.013,21.8,0.531300,0.001
+boltzmann,overlap,100000,1.716,0.112,20.0,0.531250,0.039
+boltzmann,overlap,1000000,1.062,1.126,20.3,0.531250,0.047
+boltzmann,overlap,10000000,12.483,12.244,24.1,0.531250,0.528
+boltzmann,overflow,1000,0.019,0.002,639.0,0.469000,0.000
+boltzmann,overflow,10000,0.444,0.020,6285.4,0.468800,0.009
+boltzmann,overflow,100000,5.663,0.380,63362.3,0.500000,0.121
+boltzmann,overflow,1000000,56.840,3.335,1072939.0,0.593750,1.481
+boltzmann,overflow,10000000,566.826,36.035,11147238.9,0.687500,19.292

@@ -1,0 +1,16 @@
+type,size,avgCompress(ms),avgDecompress(ms),avgGet(ns),ratio,tCrit(µs)
+edgecase32bit,nooverlap,1000,0.001,0.001,19.9,1.000000,Infinity
+edgecase32bit,nooverlap,10000,0.015,0.015,24.5,1.000000,Infinity
+edgecase32bit,nooverlap,100000,0.132,0.129,17.5,1.000000,Infinity
+edgecase32bit,nooverlap,1000000,1.387,2.314,18.7,1.000000,Infinity
+edgecase32bit,nooverlap,10000000,15.427,15.231,39.2,1.000000,Infinity
+edgecase32bit,overlap,1000,0.002,0.002,19.2,0.969000,0.001
+edgecase32bit,overlap,10000,0.016,0.016,17.3,0.968800,0.010
+edgecase32bit,overlap,100000,0.147,0.130,17.2,0.968750,0.088
+edgecase32bit,overlap,1000000,1.370,1.334,18.8,0.968750,0.865
+edgecase32bit,overlap,10000000,13.734,13.895,30.4,0.968750,8.841
+edgecase32bit,overflow,1000,0.032,0.002,632.8,1.000000,Infinity
+edgecase32bit,overflow,10000,0.138,0.020,5858.3,1.000000,Infinity
+edgecase32bit,overflow,100000,0.610,0.199,59940.5,1.000000,Infinity
+edgecase32bit,overflow,1000000,7.911,2.811,605938.8,1.000000,Infinity
+edgecase32bit,overflow,10000000,100.956,21.145,6210486.1,1.000000,Infinity

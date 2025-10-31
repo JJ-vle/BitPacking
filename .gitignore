@@ -1,0 +1,3 @@
+# csv trop gros
+data/in/*_10000000.csv
+data/out/*_10000000.csv
