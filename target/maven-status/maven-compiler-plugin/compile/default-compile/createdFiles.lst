@@ -1,0 +1,8 @@
+com\jjvle\bitpacking\benchmarks\Benchmark.class
+com\jjvle\bitpacking\benchmarks\BenchmarkGenerator.class
+com\jjvle\bitpacking\ICompressor.class
+com\jjvle\bitpacking\Main.class
+com\jjvle\bitpacking\BitPackingFactory.class
+com\jjvle\bitpacking\BitPackingOverflow.class
+com\jjvle\bitpacking\BitPackingOverlap.class
+com\jjvle\bitpacking\BitPackingNoOverlap.class

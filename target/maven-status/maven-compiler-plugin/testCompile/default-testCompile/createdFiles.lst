@@ -1,0 +1,4 @@
+com\jjvle\bitpacking\BitPackingNoOverlapTest.class
+com\jjvle\bitpacking\BitPackingOverflowTest.class
+com\jjvle\bitpacking\BitpackingApplicationTests.class
+com\jjvle\bitpacking\BitPackingOverlapTest.class
