@@ -1,7 +1,9 @@
-# BitPacking — Software Engineering Project 2025
+# BitPacking - Software Engineering Project 2025
 
 This project implements several integer compression algorithms for optimizing transmission speed while preserving direct access to individual elements after compression.  
 Developed as part of the **Software Engineering Project 2025**.
+
+A detailed project report is available (in french) as *SE2025_BitPacking_JeanJacquesVIALE.pdf*.
 
 ---
 
@@ -124,8 +126,8 @@ mvn test
 ## Author
 
 * **Jean-Jacques VIALE**
-  M1 INFORMATIQUE DS4H - Software Engineering — 2025
-  [GitHub Profile](https://github.com/<your-username>)
+  M1 INFORMATIQUE DS4H - Software Engineering 2025
+  [GitHub Profile](https://github.com/JJ-vle)
 
 
 
